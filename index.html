@@ -20,30 +20,31 @@
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <!-- custom css-->
     <style>
-       /* body{
-            font-family: segoe ui light, sans-serif;
-        }
-*/
+        /* body{
+             font-family: segoe ui light, sans-serif;
+         }
+ */
         .sidebar-nav > li > a {
             color: #fffeee;
         }
 
-        #menu-toggle, #sidebar-wrapper{
+        #menu-toggle, #sidebar-wrapper {
             background-color: darkturquoise;
         }
 
-        #menu-close{
+        #menu-close {
             color: darkturquoise;
         }
 
@@ -58,9 +59,7 @@
             z-index: 1000;
         }
 
-
-
-        .fa-stack{
+        .fa-stack {
             -webkit-transition-duration: 0.8s;
             -moz-transition-duration: 0.8s;
             -o-transition-duration: 0.8s;
@@ -71,20 +70,37 @@
             -o-transition-property: -o-transform;
             transition-property: transform;
 
-            overflow:hidden;
+            overflow: hidden;
 
         }
 
-        .fa-stack:hover
-        {
-            -webkit-transform:rotate(360deg);
-            -moz-transform:rotate(360deg);
-            -o-transform:rotate(360deg);
+        .fa-stack:hover {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
         }
 
-        .modal{
+        .modal {
             color: black;
         }
+
+
+        #totop {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:12px;
+            color:#fafafa;
+            border:1px solid #111111;
+            border-radius: 8px;
+            background:#333333;
+            padding:6px 10px;
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            display:none;
+            cursor: context-menu;
+        }
+
+
     </style>
 
 </head>
@@ -95,48 +111,49 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img alt="Brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">
+                <img alt="Brand"
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">
             </a>
             <a class="navbar-brand" href="#"><h3 style="margin-top: 8px;">V2U Consulting</h3></a>
         </div>
     </div>
 </nav>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav" style="font-size: x-large;">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav" style="font-size: x-large;">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
 
-                <a href="#top"  onclick = $("#menu-close").click(); >V2U Consulting</a>
-            </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); ><i class="fa fa-home"></i> Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick = $("#menu-close").click(); ><i class="fa fa-question-circle"></i>    About Us</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); ><i class="fa fa-thumbs-up"></i>    Solutions</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); ><i class="fa fa-gears"></i>    Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); ><i class="fa fa-trophy"></i>    Expertise</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); ><i class="fa fa-cubes"></i>    Resources</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); ><i class="fa fa-at"></i>    Contact</a>
-            </li>
-            <li>
-                <a href="blog.html" onclick = $("#menu-close").click(); ><i class="fa fa-newspaper-o"></i>    Blog</a>
-            </li>
-        </ul>
-    </nav>
+            <a href="#top" onclick=$("#menu-close").click();>V2U Consulting</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();><i class="fa fa-home"></i> Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick=$("#menu-close").click();><i class="fa fa-question-circle"></i> About Us</a>
+        </li>
+        <li>
+            <a href="#services" onclick=$("#menu-close").click();><i class="fa fa-thumbs-up"></i> Solutions</a>
+        </li>
+        <li>
+            <a href="#services" onclick=$("#menu-close").click();><i class="fa fa-gears"></i> Services</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick=$("#menu-close").click();><i class="fa fa-trophy"></i> Expertise</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick=$("#menu-close").click();><i class="fa fa-cubes"></i> Resources</a>
+        </li>
+        <li>
+            <a href="#contact" onclick=$("#menu-close").click();><i class="fa fa-at"></i> Contact</a>
+        </li>
+        <li>
+            <a href="blog.html" onclick=$("#menu-close").click();><i class="fa fa-newspaper-o"></i> Blog</a>
+        </li>
+    </ul>
+</nav>
 
 
 <!--carousel-->
@@ -157,125 +174,134 @@
 
             <div class="carousel-caption hidden-xs">
 
-                    <h1>V2U Consulting</h1>
-                    <h3>Consulting, Development, Solutions &amp; Services</h3>
-                    <!--<br>-->
-                    <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
+                <h1>V2U Consulting</h1>
+
+                <h3>Consulting, Development, Solutions &amp; Services</h3>
+                <!--<br>-->
+                <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
 
             </div>
 
         </div>
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1436885510/tech1_fnikpo.jpg" alt="...">
+
             <div class="carousel-caption hidden-xs" style="float: left; width: 50%; margin-left: -25%;">
 
-                    <h1>Technology is our passion</h1>
-                    <h3>We love providing technical solutions</h3>
-                    <!--<br>-->
-                    <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
+                <h1>Technology is our passion</h1>
+
+                <h3>We love providing technical solutions</h3>
+                <!--<br>-->
+                <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
 
             </div>
         </div>
-        
+
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1436885512/grid_ggt6sz.jpg" alt="...">
-            <div class="carousel-caption hidden-xs" style="color: #000000; float: right; width: 80%; margin-right: 0px;">
 
-                    <h1>We fulfill your Dream</h1>
-                    <h3>Enhancements as you expect</h3>
-                    <!--<br>-->
-                    <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
+            <div class="carousel-caption hidden-xs"
+                 style="color: #000000; float: right; width: 80%; margin-right: 0px;">
+
+                <h1>We fulfill your Dream</h1>
+
+                <h3>Enhancements as you expect</h3>
+                <!--<br>-->
+                <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
 
             </div>
         </div>
-        
+
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1436885522/chalk2_lxbelk.png" alt="...">
+
             <div class="carousel-caption hidden-xs">
 
-                    <h1>We help achieve your goal</h1>
-                    <h3>Knowledgeable team to accomplish the expected</h3>
-                    <!--<br>-->
-                    <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
+                <h1>We help achieve your goal</h1>
+
+                <h3>Knowledgeable team to accomplish the expected</h3>
+                <!--<br>-->
+                <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
 
             </div>
         </div>
-        
+
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1436885502/matrix_vei0f6.jpg" alt="...">
+
             <div class="carousel-caption hidden-xs">
 
-                    <h1>We Drive Projects efficiently</h1>
-                    <h3>Completing requirements on time as expected</h3>
-                    <!--<br>-->
-                    <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
+                <h1>We Drive Projects efficiently</h1>
+
+                <h3>Completing requirements on time as expected</h3>
+                <!--<br>-->
+                <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
 
             </div>
         </div>
-        
-<!--
-        <div class="item">
-            <img src="img/bg.jpg" alt="...">
-            <div class="carousel-caption">
 
-                    <h2>We are seasoned in AS400</h2>
-                    <h3>We are experienced in each and every feature available in AS400</h3>
-                    <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        <!--
+                <div class="item">
+                    <img src="img/bg.jpg" alt="...">
+                    <div class="carousel-caption">
 
-            </div>
-        </div>
-        
-        <div class="item">
-            <img src="img/bg.jpg" alt="...">
-            <div class="carousel-caption">
+                            <h2>We are seasoned in AS400</h2>
+                            <h3>We are experienced in each and every feature available in AS400</h3>
+                            <br>
+                            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
 
-                    <h2>Solution for any vertical using AS400</h2>
-                    <h3>We are capable to provide solution for any vertical using AS400 technology</h3>
-                    <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                    </div>
+                </div>
 
-            </div>
-        </div>
-        
-        <div class="item">
-            <img src="img/bg.jpg" alt="...">
-            <div class="carousel-caption">
+                <div class="item">
+                    <img src="img/bg.jpg" alt="...">
+                    <div class="carousel-caption">
 
-                    <h2>We are Masters in AS400</h2>
-                    <h3>With the lavish experience in the AS400 technology we achieve the expected</h3>
-                    <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                            <h2>Solution for any vertical using AS400</h2>
+                            <h3>We are capable to provide solution for any vertical using AS400 technology</h3>
+                            <br>
+                            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
 
-            </div>
-        </div>
-        
-        <div class="item">
-            <img src="img/bg.jpg" alt="...">
-            <div class="carousel-caption">
+                    </div>
+                </div>
 
-                    <h2>We deliver your wish</h2>
-                    <h3>You wish for any kind of solution in the AS400 technology with any functionality, we cater it.</h3>
-                    <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                <div class="item">
+                    <img src="img/bg.jpg" alt="...">
+                    <div class="carousel-caption">
 
-            </div>
-        </div>
-        
-        <div class="item">
-            <img src="img/bg.jpg" alt="...">
-            <div class="carousel-caption">
+                            <h2>We are Masters in AS400</h2>
+                            <h3>With the lavish experience in the AS400 technology we achieve the expected</h3>
+                            <br>
+                            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
 
-                    <h2>Perfect solution for your requirement</h2>
-                    <h3>The solution  we provide will be perfect as each and every code of the deliverable is tailor made.</h3>
-                    <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                    </div>
+                </div>
 
-            </div>
-        </div>
--->
+                <div class="item">
+                    <img src="img/bg.jpg" alt="...">
+                    <div class="carousel-caption">
 
-        
+                            <h2>We deliver your wish</h2>
+                            <h3>You wish for any kind of solution in the AS400 technology with any functionality, we cater it.</h3>
+                            <br>
+                            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/bg.jpg" alt="...">
+                    <div class="carousel-caption">
+
+                            <h2>Perfect solution for your requirement</h2>
+                            <h3>The solution  we provide will be perfect as each and every code of the deliverable is tailor made.</h3>
+                            <br>
+                            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+
+                    </div>
+                </div>
+        -->
+
 
     </div>
 
@@ -306,11 +332,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="..." style="opacity: 0.7">
+            <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="..."
+                 style="opacity: 0.7">
 
             <div class="carousel-caption visible-xs">
 
                 <h3>V2U Consulting</h3>
+
                 <p>Consulting, Development, Solutions &amp; Services</p>
                 <!--<br>-->
                 <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
@@ -320,9 +348,11 @@
         </div>
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="...">
-            <div class="carousel-caption visible-xs" >
+
+            <div class="carousel-caption visible-xs">
 
                 <h3>Technology is our passion</h3>
+
                 <p>We love providing technical solutions</p>
                 <!--<br>-->
                 <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
@@ -332,9 +362,11 @@
 
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="...">
-            <div class="carousel-caption visible-xs" >
+
+            <div class="carousel-caption visible-xs">
 
                 <h3>We fulfill your Dream</h3>
+
                 <p>Enhancements as you expect</p>
                 <!--<br>-->
                 <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
@@ -344,9 +376,11 @@
 
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="...">
+
             <div class="carousel-caption visible-xs">
 
                 <h3>We help achieve your goal</h3>
+
                 <p>Knowledgeable team to accomplish the expected</p>
                 <!--<br>-->
                 <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
@@ -356,9 +390,11 @@
 
         <div class="item">
             <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1437370336/black_p5dhnw.jpg" alt="...">
+
             <div class="carousel-caption visible-xs">
 
                 <h3>We Drive Projects efficiently</h3>
+
                 <p>Completing requirements on time as expected</p>
                 <!--<br>-->
                 <!--<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>-->
@@ -367,279 +403,31 @@
         </div>
 
 
-
-
-
     </div>
 
 
 </div>
 <!--carousel 2-->
 
-    <!-- Header -->
-    <!--<header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>V2U</h1><h2> Technologies</h2>
-            <h3>Consulting, Development, Solutions &amp; Services</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>-->
+<!-- Header -->
+<!--<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>V2U</h1><h2> Technologies</h2>
+        <h3>Consulting, Development, Solutions &amp; Services</h3>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+    </div>
+</header>-->
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>V2U offers application Consulting, POCs Development, Optimization and Support Services.</h2>
-                    <p class="lead">Delivering new age technology solutions with an unparalleled commitment to customer and employee satisfaction.<a target="_blank" href="http://coderandcoder.github.io/">...</a>.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary" style="background-color: #84bedd">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-6 col-lg-offset-1">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-wrench fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Application Maintenance</strong>
-                                </h4>
-                                <p>We provide you the application maintenance service that is best in the industry...</p>
-                                <a  class="btn btn-light" id="app_maint">Learn More</a>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="app_maint_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Application Maintenance</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>We provide you the application maintenance service that is best in the industry. Our services include analysis, maintenance and enhancement. The deliverable is delivered using the delivery model that is apt for the business. We use all the essential tools to enhance quality of your application.
-                                        Also, we help and ensure you to minimize the time spent on regular maintenance activities by reducing the system downtime.</p>
-                                        <br/>
-                                        <h4>Solution</h4>
-                                        <p>We consider your business challenges and provide an achievable solution for smooth transformation. The roadmap that we provide are sound enough to identify the opportunities and to transform the way you do the business.</p>
-
-                                        <h4>Transition</h4>
-                                        <p>We understand and retain the core knowledge of your application and the business therefore we can achieve the required services of your customers and perform the effective change management.</p>
-
-                                        <h4>Execution</h4>
-                                        <p>With our vast experience, we ensure to provide the best-in-class delivery by taking end-to-end ownership of the services that we sign up. The execution methodologies that we follow reduces the operational risk and improve the time-to-market.</p>
-
-
-                                        <h4>Transformation</h4>
-                                        <p>We continually strive to deliver valuable output that is in line to your business objective. The path to transformation that we provide is secured by a set of well-defined methodologies.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- modal ends-->
-
-
-
-
-
-
-                        <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Database Designing</strong>
-                                </h4>
-                                <p>We provide you a database solution that helps you to effectively steer your business...</p>
-                                <a class="btn btn-light" id="data_desi" data-target="#myModal">Learn More</a>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="data_desi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Database Design</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>We provide you a database solution that helps you to effectively steer your business. We achieve this with our extensive experience in developing and implementing multi-user Windows- and UNIX-based applications with database back-ends. We perform database structure design, build customize database rules, overall data quality, and implement data migration/validation that match your business requirements.</p>
-                                        <p>We have database expertise across all lifecycle stages of data/database and can ensure that any data dependent project is delivered successfully and with maximum return on investment.</p>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- modal ends-->
-
-
-
-
-
-
-                        <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-database fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Database Development</strong>
-                                </h4>
-                                <p>We develop a high-performance database leveraging application functional...</p>
-                                <a class="btn btn-light" id="data_dev">Learn More</a>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="data_dev_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Database Development</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>We develop a high-performance database leveraging application functionality with our seasoned  knowledge, techniques and software engineering skills. We are capable to support your complex business logic and the continuously growing data quantity by efficiently handling the technological challenges in the database. Our highly efficient team accomplish transformation of your business requirements into effective physical database design.</p>
-                                        <p>With a comprehensive knowledge V2U makes databases with a solid foundation that enables your application to maximize its functional and integration capabilities, that can efficiently support the application workflows.</p>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- modal ends-->
-
-
-
-
-
-                        <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-exchange fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Database Migration</strong>
-                                </h4>
-                                <p>V2U provides a full-cycle database migration service to minimize production downtime...</p>
-                                <a  class="btn btn-light" id="data_mig">Learn More</a>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="data_mig_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Database Migration</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p>V2U provides a full-cycle database migration service to minimize production downtime and avoid legacy system migration issues. We apply our database development skills to effectively establish the target database and utilize data connectors, ETL tools and manual scripting for data migration.</p>
-
-                                        <p>During database migration we do Migration Planning, Target Database Preparation, Migration Testing/Simulation, Data Migration, and Data Consistency and Integrity Verification.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- modal ends-->
-
-
-
-
-
-
-                        <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-gears fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Database Reengineering</strong>
-                                </h4>
-                                <p>V2U's engineers are experienced in complete database reengineering by resolving issues...</p>
-                                <a  class="btn btn-light" id="data_reen">Learn More</a>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="data_reen_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Database Reengineering</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>V2U's engineers are experienced in complete database reengineering by resolving issues and eliminating hurdles such as critical performance issues, lack in interoperability and scalability. </p>
-                                        <p>Organizations engage in database reengineering and application modification using evolving technologies to meet the changing business needs. Re-engineering the existing applications enables companies to achieve future business objectives and reach the profit goals.</p>
-                                        <p>Our highly skilled and experienced team of database consultants provides database re-engineering expertise for platforms including Oracle Enterprise database, Open Source MySQL database, and Microsoft SQL Server. We understand client’s business requirements individually along with the intricacies involved in the technical implementation process. We help our clients in database engineering efforts with assessing the current legacy environment and developing the strategic road map for achieving improved target information management architecture.</p>
-                                        <p>Our consultants help our customers transform their IT applications and underlying database systems to a simple and extensible architecture that leverages the latest technologies and robust integration frameworks. We have a proven record of working with business organizations with unique IT application needs.</p>
-                                        <p>Our approach and processes focus on re-engineering existing database to newer architecture that support ongoing business changes and enables scalability for business growth.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- modal ends-->
-                        
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-
-
-<!-- section 3 -->
-<section id="we_are" class="about">
+<!-- About -->
+<section id="about" class="about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center bg-danger">
-            <h2>We are seasoned in AS400</h2>
-            <p>We are experienced in each and every feature available in AS400</p>
-        </div>
-            <div class="col-lg-12 text-center bg-info">
-                <h2>Solution for any vertical using AS400</h2>
-                <p>We are capable to provide solution for any vertical using AS400 technology</p>
+            <div class="col-lg-12 text-center">
+                <h2>V2U offers application Consulting, POCs Development, Optimization and Support Services.</h2>
+
+                <p class="lead">Delivering new age technology solutions with an unparalleled commitment to customer and
+                    employee satisfaction.<a target="_blank" href="http://coderandcoder.github.io/">...</a>.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -647,143 +435,476 @@
     <!-- /.container -->
 </section>
 
-    <!-- Callout -->
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services" class="services bg-primary" style="background-color: #84bedd">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Our Services</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-lg-offset-1">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-wrench fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Application Maintenance</strong>
+                            </h4>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
+                            <p>We provide you the application maintenance service that is best in the industry...</p>
+                            <a class="btn btn-light" id="app_maint">Learn More</a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="app_maint_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Application Maintenance</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>We provide you the application maintenance service that is best in the industry.
+                                        Our services include analysis, maintenance and enhancement. The deliverable is
+                                        delivered using the delivery model that is apt for the business. We use all the
+                                        essential tools to enhance quality of your application.
+                                        Also, we help and ensure you to minimize the time spent on regular maintenance
+                                        activities by reducing the system downtime.</p>
+                                    <br/>
+                                    <h4>Solution</h4>
+
+                                    <p>We consider your business challenges and provide an achievable solution for
+                                        smooth transformation. The roadmap that we provide are sound enough to identify
+                                        the opportunities and to transform the way you do the business.</p>
+
+                                    <h4>Transition</h4>
+
+                                    <p>We understand and retain the core knowledge of your application and the business
+                                        therefore we can achieve the required services of your customers and perform the
+                                        effective change management.</p>
+
+                                    <h4>Execution</h4>
+
+                                    <p>With our vast experience, we ensure to provide the best-in-class delivery by
+                                        taking end-to-end ownership of the services that we sign up. The execution
+                                        methodologies that we follow reduces the operational risk and improve the
+                                        time-to-market.</p>
+
+
+                                    <h4>Transformation</h4>
+
+                                    <p>We continually strive to deliver valuable output that is in line to your business
+                                        objective. The path to transformation that we provide is secured by a set of
+                                        well-defined methodologies.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <!-- modal ends-->
+
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Database Designing</strong>
+                            </h4>
+
+                            <p>We provide you a database solution that helps you to effectively steer your
+                                business...</p>
+                            <a class="btn btn-light" id="data_desi" data-target="#myModal">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="data_desi_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Database Design</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>We provide you a database solution that helps you to effectively steer your
+                                        business. We achieve this with our extensive experience in developing and
+                                        implementing multi-user Windows- and UNIX-based applications with database
+                                        back-ends. We perform database structure design, build customize database rules,
+                                        overall data quality, and implement data migration/validation that match your
+                                        business requirements.</p>
+
+                                    <p>We have database expertise across all lifecycle stages of data/database and can
+                                        ensure that any data dependent project is delivered successfully and with
+                                        maximum return on investment.</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal ends-->
+
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-database fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Database Development</strong>
+                            </h4>
+
+                            <p>We develop a high-performance database leveraging application functional...</p>
+                            <a class="btn btn-light" id="data_dev">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="data_dev_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Database Development</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>We develop a high-performance database leveraging application functionality with
+                                        our seasoned knowledge, techniques and software engineering skills. We are
+                                        capable to support your complex business logic and the continuously growing data
+                                        quantity by efficiently handling the technological challenges in the database.
+                                        Our highly efficient team accomplish transformation of your business
+                                        requirements into effective physical database design.</p>
+
+                                    <p>With a comprehensive knowledge V2U makes databases with a solid foundation that
+                                        enables your application to maximize its functional and integration
+                                        capabilities, that can efficiently support the application workflows.</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal ends-->
+
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-exchange fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Database Migration</strong>
+                            </h4>
+
+                            <p>V2U provides a full-cycle database migration service to minimize production
+                                downtime...</p>
+                            <a class="btn btn-light" id="data_mig">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="data_mig_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Database Migration</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>V2U provides a full-cycle database migration service to minimize production
+                                        downtime and avoid legacy system migration issues. We apply our database
+                                        development skills to effectively establish the target database and utilize data
+                                        connectors, ETL tools and manual scripting for data migration.</p>
+
+                                    <p>During database migration we do Migration Planning, Target Database Preparation,
+                                        Migration Testing/Simulation, Data Migration, and Data Consistency and Integrity
+                                        Verification.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal ends-->
+
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-gears fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Database Reengineering</strong>
+                            </h4>
+
+                            <p>V2U's engineers are experienced in complete database reengineering by resolving
+                                issues...</p>
+                            <a class="btn btn-light" id="data_reen">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="data_reen_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Database Reengineering</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>V2U's engineers are experienced in complete database reengineering by resolving
+                                        issues and eliminating hurdles such as critical performance issues, lack in
+                                        interoperability and scalability. </p>
+
+                                    <p>Organizations engage in database reengineering and application modification using
+                                        evolving technologies to meet the changing business needs. Re-engineering the
+                                        existing applications enables companies to achieve future business objectives
+                                        and reach the profit goals.</p>
+
+                                    <p>Our highly skilled and experienced team of database consultants provides database
+                                        re-engineering expertise for platforms including Oracle Enterprise database,
+                                        Open Source MySQL database, and Microsoft SQL Server. We understand client’s
+                                        business requirements individually along with the intricacies involved in the
+                                        technical implementation process. We help our clients in database engineering
+                                        efforts with assessing the current legacy environment and developing the
+                                        strategic road map for achieving improved target information management
+                                        architecture.</p>
+
+                                    <p>Our consultants help our customers transform their IT applications and underlying
+                                        database systems to a simple and extensible architecture that leverages the
+                                        latest technologies and robust integration frameworks. We have a proven record
+                                        of working with business organizations with unique IT application needs.</p>
+
+                                    <p>Our approach and processes focus on re-engineering existing database to newer
+                                        architecture that support ongoing business changes and enables scalability for
+                                        business growth.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- modal ends-->
+
                 </div>
-                <!-- /.col-lg-10 -->
+                <!-- /.row (nested) -->
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
-    </section>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
 
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary" style="background-color: #a160a4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+
+<!-- section 3 -->
+<section id="we_are" class="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 text-center bg-danger">
+                <h2>We are seasoned in AS400</h2>
+
+                <p>We are experienced in each and every feature available in AS400</p>
+            </div>
+
+            <div class="col-lg-12 text-center bg-info">
+                <h2>Solution for any vertical using AS400</h2>
+
+                <p>We are capable to provide solution for any vertical using AS400 technology</p>
+            </div>
+
+            <div class="col-lg-12 text-center bg-danger">
+
+                <h2>We deliver your wish</h2>
+
+                <p>You wish for any kind of solution in the AS400 technology with any functionality, we cater it.</p>
+
+            </div>
+
+            <div class="col-lg-12 text-center bg-info">
+                <h2>Perfect solution for your requirement</h2>
+
+                <p>The solution we provide will be perfect as each and every code of the deliverable is tailor made.</p>
+            </div>
+
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Callout -->
+<aside class="callout">
+    <div class="text-vertical-center">
+        <h1>Vertically Centered Text</h1>
+    </div>
+</aside>
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>Our Work</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                <!-- /.row (nested) -->
+                <a href="#" class="btn btn-dark">View More Items</a>
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Call to Action -->
+<aside class="call-to-action" style="background-color: #FECBD9">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 style="font-size: 80px;">BLOG</h1>
+                <p>Latest Technology-Trends and Updates</p>
+
+                <a href="blog.html" class="btn btn-lg btn-dark">View All</a>
             </div>
         </div>
-    </aside>
+    </div>
+</aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </section>
+<!-- Map -->
+<section id="contact" class="map">
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <br/>
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+    </small>
+    </iframe>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>V2U Consulting</strong>
-                    </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>V2U Consulting</strong>
+                </h4>
+
+                <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Your Website 2014</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 
 
 
 
+<a id="totop"><i class="fa fa-arrow-up" style="font-size: 20px; color: #ffffff; padding: 10px;"></i></a>
 
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
     // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
+    $("#menu-close").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
                 var target = $(this.hash);
@@ -796,15 +917,36 @@
                 }
             }
         });
+
+
+        //-to top js
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                $('#totop').fadeIn();
+            } else {
+                $('#totop').fadeOut();
+            }
+        });
+
+        $('#totop').click(function() {
+            $('body,html').animate({scrollTop:0},500);
+        });
+
+
     });
 
-//    $('.sidebar-nav>li>a').css('color','#fffeee');
+    //    $('.sidebar-nav>li>a').css('color','#fffeee');
 
-    </script>
+
+
+
+</script>
 
 
 <!--custom js-->
 <script src="js/index.js"></script>
+
+
 
 </body>
 
