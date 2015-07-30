@@ -10,13 +10,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>V2U_test_2</title>
+    <title>V2U_test</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -32,20 +33,23 @@
 
     <!-- custom css-->
     <style>
-        /* body{
-             font-family: segoe ui light, sans-serif;
-         }
- */
+        body{
+            /*font-family: segoe ui light, sans-serif;*/
+            overflow-x: hidden;
+        }
         .sidebar-nav > li > a {
             color: #fffeee;
         }
 
         #menu-toggle, #sidebar-wrapper {
-            background-color: darkturquoise;
+            /*background-color: darkturquoise;*/
+
+            background-color: #6AB7FF;
         }
 
         #menu-close {
-            color: darkturquoise;
+            /*color: darkturquoise;*/
+            color: #6AB7FF;
         }
 
         .navbar {
@@ -101,11 +105,30 @@
         }
 
 
+        footer form input[type="text"], footer form input[type="email"], footer form input[type="number"], footer form textarea {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            outline: 0;
+            padding: 1em;
+            margin-top: 4em;
+            background: transparent;
+            width: 30%;
+            margin-right: 2%;
+        }
+
+        footer form textarea {
+            width: 95.5%;
+            margin-top: 2em;
+            min-height: 255px;
+            resize: none;
+        }
+
     </style>
 
 </head>
 
-<body>
+<body onload="$('.accordian_divs').hide();">
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -524,7 +547,7 @@
 
                             <p>We provide you a database solution that helps you to effectively steer your
                                 business...</p>
-                            <a class="btn btn-light" id="data_desi" data-target="#myModal">Learn More</a>
+                            <a class="btn btn-light" id="data_desi">Learn More</a>
                         </div>
                     </div>
                     <!-- Modal -->
@@ -724,6 +747,113 @@
     <!-- /.container -->
 </section>
 
+<section id="accordian_section">
+
+    <div class="accordian_divs" id="app_maint_modal2">
+        <p>We provide you the application maintenance service that is best in the industry.
+            Our services include analysis, maintenance and enhancement. The deliverable is
+            delivered using the delivery model that is apt for the business. We use all the
+            essential tools to enhance quality of your application.
+            Also, we help and ensure you to minimize the time spent on regular maintenance
+            activities by reducing the system downtime.</p>
+        <br/>
+        <h4>Solution</h4>
+
+        <p>We consider your business challenges and provide an achievable solution for
+            smooth transformation. The roadmap that we provide are sound enough to identify
+            the opportunities and to transform the way you do the business.</p>
+
+        <h4>Transition</h4>
+
+        <p>We understand and retain the core knowledge of your application and the business
+            therefore we can achieve the required services of your customers and perform the
+            effective change management.</p>
+
+        <h4>Execution</h4>
+
+        <p>With our vast experience, we ensure to provide the best-in-class delivery by
+            taking end-to-end ownership of the services that we sign up. The execution
+            methodologies that we follow reduces the operational risk and improve the
+            time-to-market.</p>
+
+
+        <h4>Transformation</h4>
+
+        <p>We continually strive to deliver valuable output that is in line to your business
+            objective. The path to transformation that we provide is secured by a set of
+            well-defined methodologies.</p>
+    </div>
+
+    <div class="accordian_divs" id="data_desi_modal2">
+        <p>We provide you a database solution that helps you to effectively steer your
+            business. We achieve this with our extensive experience in developing and
+            implementing multi-user Windows- and UNIX-based applications with database
+            back-ends. We perform database structure design, build customize database rules,
+            overall data quality, and implement data migration/validation that match your
+            business requirements.</p>
+
+        <p>We have database expertise across all lifecycle stages of data/database and can
+            ensure that any data dependent project is delivered successfully and with
+            maximum return on investment.</p>
+    </div>
+
+    <div class="accordian_divs" id="data_dev_modal2">
+        <p>We develop a high-performance database leveraging application functionality with
+            our seasoned knowledge, techniques and software engineering skills. We are
+            capable to support your complex business logic and the continuously growing data
+            quantity by efficiently handling the technological challenges in the database.
+            Our highly efficient team accomplish transformation of your business
+            requirements into effective physical database design.</p>
+
+        <p>With a comprehensive knowledge V2U makes databases with a solid foundation that
+            enables your application to maximize its functional and integration
+            capabilities, that can efficiently support the application workflows.</p>
+    </div>
+
+    <div class="accordian_divs" id="data_mig_modal2">
+        <p>V2U provides a full-cycle database migration service to minimize production
+            downtime and avoid legacy system migration issues. We apply our database
+            development skills to effectively establish the target database and utilize data
+            connectors, ETL tools and manual scripting for data migration.</p>
+
+        <p>During database migration we do Migration Planning, Target Database Preparation,
+            Migration Testing/Simulation, Data Migration, and Data Consistency and Integrity
+            Verification.</p>
+    </div>
+
+    <div class="accordian_divs" id="data_reen_modal2">
+        <p>V2U's engineers are experienced in complete database reengineering by resolving
+            issues and eliminating hurdles such as critical performance issues, lack in
+            interoperability and scalability. </p>
+
+        <p>Organizations engage in database reengineering and application modification using
+            evolving technologies to meet the changing business needs. Re-engineering the
+            existing applications enables companies to achieve future business objectives
+            and reach the profit goals.</p>
+
+        <p>Our highly skilled and experienced team of database consultants provides database
+            re-engineering expertise for platforms including Oracle Enterprise database,
+            Open Source MySQL database, and Microsoft SQL Server. We understand client’s
+            business requirements individually along with the intricacies involved in the
+            technical implementation process. We help our clients in database engineering
+            efforts with assessing the current legacy environment and developing the
+            strategic road map for achieving improved target information management
+            architecture.</p>
+
+        <p>Our consultants help our customers transform their IT applications and underlying
+            database systems to a simple and extensible architecture that leverages the
+            latest technologies and robust integration frameworks. We have a proven record
+            of working with business organizations with unique IT application needs.</p>
+
+        <p>Our approach and processes focus on re-engineering existing database to newer
+            architecture that support ongoing business changes and enables scalability for
+            business growth.</p>
+    </div>
+
+
+
+</section>
+
 
 <!-- section 3 -->
 <section id="we_are" class="about">
@@ -832,7 +962,7 @@
 </aside>
 
 <!-- Map -->
-<section id="contact" class="map">
+<!--<section id="contact" class="map">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
     <br/>
@@ -840,40 +970,37 @@
         <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
     </small>
     </iframe>
-</section>
+</section>-->
 
 <!-- Footer -->
-<footer>
-    <div class="container">
+<footer style="background-image: url('img/contact_bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container" >
         <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h4><strong>V2U Consulting</strong>
-                </h4>
-
-                <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
-                    </li>
-                </ul>
-                <br>
-                <ul class="list-inline">
-                    <li>
-                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                    </li>
-                </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright &copy; Your Website 2014</p>
+            <div class="col-xs-12 col-lg-12 col-md-12 col-lg-offset-2">
+                <div class="text-vertical-center text-center">
+                    <h1 style="color: #ffffff">CONTACT US</h1>
+                </div>
+                <form onsubmit="javascript: return validations();" style="width: 75%; ">
+                    <input type="text" id="name" name="name" class="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
+                    <input type="email" id="emailId" name="emailId" class="text" value="Your mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
+                    <input type="text" id="contactNo" name="contactNo" class="text" value="Your Contact Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Contact Number';}" placeholder="Contact Number with Country Code">
+                    <textarea name="message" id="message" onfocus="if(this.value == 'Enter Message Here') this.value='';" onblur="if(this.value == '') this.value='Enter Message Here';">Enter Message Here</textarea>
+                    <input type="text" name="action" value="customer" id="type" hidden="hidden">
+                    <input type="submit" id="submit" class="btn btn-default contactbtn" onclick="javascript: validations();" value="SEND MESSAGE"><span id="error"></span>
+                </form>
             </div>
         </div>
     </div>
 </footer>
+<div class="container" style="background-color: #182227; width: 100%;">
+    <div class="col-xs-3 col-lg-offset-5 col-md-offset-5 col-xs-offset-5">
+        <h2 style="color: #ffffff; text-align: center">V2U CONSULTING</h2>
+        <h6 style="color: #ffffff; text-align: center">+91-9884111242</h6>
+        <i style="color: #285e8e" class="fa fa-facebook-square fa-3x col-xs-3 col-xs-offset-1"></i>
+        <i style="color: #269abc" class="fa fa-twitter-square fa-3x col-xs-3"></i>
+        <i style="color: #ff4d4d" class="fa fa-google-plus-square fa-3x col-xs-3"></i>
+    </div>
+</div>
 
 
 
@@ -931,6 +1058,8 @@
         $('#totop').click(function() {
             $('body,html').animate({scrollTop:0},500);
         });
+
+
 
 
     });
