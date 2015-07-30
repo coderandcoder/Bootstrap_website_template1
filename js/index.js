@@ -22,3 +22,9 @@ $('#data_mig').click(function(){
 $('#data_reen').click(function(){
     $('#data_reen_modal').modal('show')
 });
+
+
+
+
+
+

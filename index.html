@@ -24,12 +24,21 @@
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
           rel="stylesheet" type="text/css">
 
+
+    <!-- 3d gallery css-->
+    <link rel="stylesheet" type="text/css" href="css/3dGalleryStyle.css" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- for 3d gallery -->
+    <script src="js/modernizr.custom.53451.js"></script>
+
+
 
     <!-- custom css-->
     <style>
@@ -124,6 +133,10 @@
             resize: none;
         }
 
+
+
+
+
     </style>
 
 </head>
@@ -134,10 +147,11 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img alt="Brand"
-                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">
+                <!--<img alt="Brand"-->
+                     <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">-->
+                <img src="img/logo_small.png" class="img-responsive">
             </a>
-            <a class="navbar-brand" href="#"><h3 style="margin-top: 8px;">V2U Consulting</h3></a>
+            <!--<a class="navbar-brand" href="#"><h3 style="margin-top: 8px;">V2U Consulting</h3></a>-->
         </div>
     </div>
 </nav>
@@ -250,7 +264,7 @@
         </div>
 
         <div class="item">
-            <img src="http://res.cloudinary.com/dtahhr48a/image/upload/v1436885502/matrix_vei0f6.jpg" alt="...">
+            <img src="img/1500x500/matrix1.png" alt="...">
 
             <div class="carousel-caption hidden-xs">
 
@@ -460,7 +474,7 @@
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services" class="services bg-primary" style="background-color: #84bedd">
+<section id="services" class="services bg-primary" style="background-color: deepskyblue">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -747,7 +761,7 @@
     <!-- /.container -->
 </section>
 
-<section id="accordian_section">
+<!--<section id="accordian_section">
 
     <div class="accordian_divs" id="app_maint_modal2">
         <p>We provide you the application maintenance service that is best in the industry.
@@ -852,11 +866,65 @@
 
 
 
+</section>-->
+
+
+<!--slide animation-->
+<section id="dg-container" class="dg-container">
+    <div class="dg-wrapper">
+
+        <a href="#"><img src="img/portfolio-1.jpg" alt="image01">
+            <div class="">
+
+                <h1>We are seasoned in AS400</h1>
+
+                <h3>We are experienced in each and every feature available in AS400</h3>
+
+            </div>
+        </a>
+
+        <a href="#"><img src="img/portfolio-2.jpg" alt="image02">
+            <div class="" style="color: #ffffff">
+                <h1>Solution for any vertical using AS400</h1>
+
+                <h3>We are capable to provide solution for any vertical using AS400 technology</h3>
+            </div>
+        </a>
+
+        <a href="#"><img src="img/portfolio-3.jpg" alt="image03">
+            <div class="" style="color: #ffffff">
+                <h1>We deliver your wish</h1>
+
+                <h3>You wish for any kind of solution in the AS400 technology with any functionality, we cater it.</h3>
+            </div>
+        </a>
+
+        <a href="#"><img src="img/portfolio-4.jpg" alt="image04">
+            <div class="">
+                <h1>Perfect solution for your requirement</h1>
+
+                <h3>The solution we provide will be perfect as each and every code of the deliverable is tailor made.</h3>
+            </div>
+        </a>
+        <!--<a href="#"><img src="images/5.jpg" alt="image05"><div>http://circlemeetups.com/</div></a>
+        <a href="#"><img src="images/6.jpg" alt="image06"><div>http://www.castirondesign.com/</div></a>
+        <a href="#"><img src="images/7.jpg" alt="image07"><div>http://www.foundrycollective.com/</div></a>
+        <a href="#"><img src="images/8.jpg" alt="image08"><div>http://www.mathiassterner.com/</div></a>
+        <a href="#"><img src="images/9.jpg" alt="image09"><div>http://learnlakenona.com/</div></a>
+        <a href="#"><img src="images/10.jpg" alt="image10"><div>http://www.neighborhood-studio.com/</div></a>
+        <a href="#"><img src="images/11.jpg" alt="image11"><div>http://www.beckindesign.com/</div></a>
+        <a href="#"><img src="images/12.jpg" alt="image12"><div>http://kicksend.com/</div></a>-->
+    </div>
+    <!--nav>
+        <span class="dg-prev">&lt;</span>
+        <span class="dg-next">&gt;</span>
+    </nav-->
 </section>
 
 
+
 <!-- section 3 -->
-<section id="we_are" class="about">
+<!--<section id="we_are" class="about">
     <div class="container">
         <div class="row">
 
@@ -888,21 +956,21 @@
 
 
         </div>
-        <!-- /.row -->
+        &lt;!&ndash; /.row &ndash;&gt;
     </div>
-    <!-- /.container -->
-</section>
+    &lt;!&ndash; /.container &ndash;&gt;
+</section>-->
 
 <!-- Callout -->
-<aside class="callout">
+<!--<aside class="callout">
     <div class="text-vertical-center">
         <h1>Vertically Centered Text</h1>
     </div>
-</aside>
+</aside>-->
 
 <!-- Portfolio -->
 <section id="portfolio" class="portfolio">
-    <div class="container">
+    <div class="container"  style="background-color: deepskyblue; width: 100%;">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2>Our Work</h2>
@@ -992,6 +1060,7 @@
         </div>
     </div>
 </footer>
+
 <div class="container" style="background-color: #182227; width: 100%;">
     <div class="col-xs-3 col-lg-offset-5 col-md-offset-5 col-xs-offset-5">
         <h2 style="color: #ffffff; text-align: center">V2U CONSULTING</h2>
@@ -1010,10 +1079,20 @@
 
 
 <!-- jQuery -->
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
+<script src="js/jquery-2.1.4.min.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+
+
+<!--carousel js-->
+<script src="js/jquery.gallery.js"></script>
+<!--<script src="js/jquery.carouFredSel-6.0.4-packed.js"></script>-->
+
+
 
 <!-- Custom Theme JavaScript -->
 <script>
@@ -1058,6 +1137,17 @@
         $('#totop').click(function() {
             $('body,html').animate({scrollTop:0},500);
         });
+
+
+
+
+//--------------------carousel image slider starts---------------------
+
+        $('#dg-container').gallery({
+            autoplay	:	true
+        });
+
+        //-----------carousel image slider code ends-----------
 
 
 
