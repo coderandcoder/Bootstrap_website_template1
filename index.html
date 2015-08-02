@@ -26,7 +26,7 @@
 
 
     <!-- 3d gallery css-->
-    <link rel="stylesheet" type="text/css" href="css/3dGalleryStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/3dGalleryStyle.css"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,13 +39,13 @@
     <script src="js/modernizr.custom.53451.js"></script>
 
 
-
     <!-- custom css-->
     <style>
-        body{
+        body {
             /*font-family: segoe ui light, sans-serif;*/
             overflow-x: hidden;
         }
+
         .sidebar-nav > li > a {
             color: #fffeee;
         }
@@ -55,7 +55,8 @@
 
             background-color: #6AB7FF;
         }
-        #menu-toggle{
+
+        #menu-toggle {
             border: 1px solid #f0f0f0;
         }
 
@@ -100,22 +101,20 @@
             color: black;
         }
 
-
         #totop {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:12px;
-            color:#fafafa;
-            border:1px solid #111111;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #fafafa;
+            border: 1px solid #111111;
             border-radius: 8px;
-            background:#333333;
-            padding:6px 10px;
-            position:fixed;
-            bottom:20px;
-            right:20px;
-            display:none;
+            background: #333333;
+            padding: 6px 10px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
             cursor: context-menu;
         }
-
 
         footer form input[type="text"], footer form input[type="email"], footer form input[type="number"], footer form textarea {
             border: 1px solid #fff;
@@ -137,9 +136,6 @@
         }
 
 
-
-
-
     </style>
 
 </head>
@@ -151,7 +147,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
                 <!--<img alt="Brand"-->
-                     <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">-->
+                <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC">-->
                 <img src="img/logo_small.png" class="img-responsive">
             </a>
             <!--<a class="navbar-brand" href="#"><h3 style="margin-top: 8px;">V2U Consulting</h3></a>-->
@@ -461,7 +457,7 @@
 
 <!-- About -->
 <section id="about" class="about" style="padding-top: 10%; padding-bottom: 10%;">
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>V2U offers application Consulting, POCs Development, Optimization and Support Services.</h1>
@@ -477,7 +473,8 @@
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services" class="services bg-primary" style="background-color: deepskyblue; padding-top: 10%; padding-bottom: 10%;">
+<section id="services" class="services bg-primary"
+         style="background-color: deepskyblue; padding-top: 10%; padding-bottom: 10%;">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -874,56 +871,62 @@
 
 <!--slide animation-->
 <div class="col-xs-12" style="background-color: cornflowerblue; margin-top: 50px;">
-<section id="dg-container" class="dg-container" style="background-color: cornflowerblue; margin-top: 50px;">
-    <div class="dg-wrapper">
+    <section id="dg-container" class="dg-container" style="background-color: cornflowerblue; margin-top: 50px;">
+        <div class="dg-wrapper">
 
-        <a href="#"><img src="img/portfolio-1.jpg" alt="image01">
-            <div class="">
+            <a href="#"><img src="img/portfolio-1.jpg" alt="image01">
 
-                <h1>We are seasoned in AS400</h1>
+                <div class="">
 
-                <h3>We are experienced in each and every feature available in AS400</h3>
+                    <h1>We are seasoned in AS400</h1>
 
-            </div>
-        </a>
+                    <h3>We are experienced in each and every feature available in AS400</h3>
 
-        <a href="#"><img src="img/portfolio-2.jpg" alt="image02">
-            <div class="" style="color: #ffffff">
-                <h1>Solution for any vertical using AS400</h1>
+                </div>
+            </a>
 
-                <h3>We are capable to provide solution for any vertical using AS400 technology</h3>
-            </div>
-        </a>
+            <a href="#"><img src="img/portfolio-2.jpg" alt="image02">
 
-        <a href="#"><img src="img/portfolio-3.jpg" alt="image03">
-            <div class="" style="color: #ffffff">
-                <h1>We deliver your wish</h1>
+                <div class="" style="color: #ffffff">
+                    <h1>Solution for any vertical using AS400</h1>
 
-                <h3>You wish for any kind of solution in the AS400 technology with any functionality, we cater it.</h3>
-            </div>
-        </a>
+                    <h3>We are capable to provide solution for any vertical using AS400 technology</h3>
+                </div>
+            </a>
 
-        <a href="#"><img src="img/portfolio-4.jpg" alt="image04">
-            <div class="">
-                <h1>Perfect solution for your requirement</h1>
+            <a href="#"><img src="img/portfolio-3.jpg" alt="image03">
 
-                <h3>The solution we provide will be perfect as each and every code of the deliverable is tailor made.</h3>
-            </div>
-        </a>
-        <!--<a href="#"><img src="images/5.jpg" alt="image05"><div>http://circlemeetups.com/</div></a>
-        <a href="#"><img src="images/6.jpg" alt="image06"><div>http://www.castirondesign.com/</div></a>
-        <a href="#"><img src="images/7.jpg" alt="image07"><div>http://www.foundrycollective.com/</div></a>
-        <a href="#"><img src="images/8.jpg" alt="image08"><div>http://www.mathiassterner.com/</div></a>
-        <a href="#"><img src="images/9.jpg" alt="image09"><div>http://learnlakenona.com/</div></a>
-        <a href="#"><img src="images/10.jpg" alt="image10"><div>http://www.neighborhood-studio.com/</div></a>
-        <a href="#"><img src="images/11.jpg" alt="image11"><div>http://www.beckindesign.com/</div></a>
-        <a href="#"><img src="images/12.jpg" alt="image12"><div>http://kicksend.com/</div></a>-->
-    </div>
-    <!--nav>
-        <span class="dg-prev">&lt;</span>
-        <span class="dg-next">&gt;</span>
-    </nav-->
-</section>
+                <div class="" style="color: #ffffff">
+                    <h1>We deliver your wish</h1>
+
+                    <h3>You wish for any kind of solution in the AS400 technology with any functionality, we cater
+                        it.</h3>
+                </div>
+            </a>
+
+            <a href="#"><img src="img/portfolio-4.jpg" alt="image04">
+
+                <div class="">
+                    <h1>Perfect solution for your requirement</h1>
+
+                    <h3>The solution we provide will be perfect as each and every code of the deliverable is tailor
+                        made.</h3>
+                </div>
+            </a>
+            <!--<a href="#"><img src="images/5.jpg" alt="image05"><div>http://circlemeetups.com/</div></a>
+            <a href="#"><img src="images/6.jpg" alt="image06"><div>http://www.castirondesign.com/</div></a>
+            <a href="#"><img src="images/7.jpg" alt="image07"><div>http://www.foundrycollective.com/</div></a>
+            <a href="#"><img src="images/8.jpg" alt="image08"><div>http://www.mathiassterner.com/</div></a>
+            <a href="#"><img src="images/9.jpg" alt="image09"><div>http://learnlakenona.com/</div></a>
+            <a href="#"><img src="images/10.jpg" alt="image10"><div>http://www.neighborhood-studio.com/</div></a>
+            <a href="#"><img src="images/11.jpg" alt="image11"><div>http://www.beckindesign.com/</div></a>
+            <a href="#"><img src="images/12.jpg" alt="image12"><div>http://kicksend.com/</div></a>-->
+        </div>
+        <!--nav>
+            <span class="dg-prev">&lt;</span>
+            <span class="dg-next">&gt;</span>
+        </nav-->
+    </section>
 </div>
 
 
@@ -973,8 +976,8 @@
 </aside>-->
 
 <!-- Portfolio -->
-<section id="portfolio" class="portfolio" >
-    <div class="container"  style="background-color: deepskyblue; width: 100%; padding-top: 10%; padding-bottom: 10%;">
+<section id="portfolio" class="portfolio">
+    <div class="container" style="background-color: deepskyblue; width: 100%; padding-top: 10%; padding-bottom: 10%;">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2>Our Work</h2>
@@ -1020,11 +1023,12 @@
 </section>
 
 <!-- Call to Action -->
-<aside class="call-to-action" style="background-color: #6495ED; padding-top: 10%; padding-bottom: 10%;" >
+<aside class="call-to-action" style="background-color: #6495ED; padding-top: 10%; padding-bottom: 10%;">
     <div class="container" id="blog">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 style="font-size: 80px;">BLOG</h1>
+
                 <p>Latest Technology-Trends and Updates</p>
 
                 <a href="blog.html" class="btn btn-lg btn-dark">View All</a>
@@ -1053,16 +1057,28 @@
                     <h1 style="color: #ffffff">CONTACT US</h1>
                 </div>
                 <form onsubmit="javascript: return validations();" style="width: 75%; ">
-                    <input type="text" id="name" name="name" class="text" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
-                    <input type="email" id="emailId" name="emailId" class="text" value="Your mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
-                    <input type="text" id="contactNo" name="contactNo" class="text" value="Your Contact Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Contact Number';}" placeholder="Contact Number with Country Code">
-                    <textarea name="message" id="message" onfocus="if(this.value == 'Enter Message Here') this.value='';" onblur="if(this.value == '') this.value='Enter Message Here';">Enter Message Here</textarea>
+                    <input type="text" id="name" name="name" class="text" value="Your Name" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Your Name';}">
+                    <input type="email" id="emailId" name="emailId" class="text" value="Your mail"
+                           onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
+                    <input type="text" id="contactNo" name="contactNo" class="text" value="Your Contact Number"
+                           onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Your Contact Number';}"
+                           placeholder="Contact Number with Country Code">
+                    <textarea name="message" id="message"
+                              onfocus="if(this.value == 'Enter Message Here') this.value='';"
+                              onblur="if(this.value == '') this.value='Enter Message Here';">Enter Message Here</textarea>
                     <input type="text" name="action" value="customer" id="type" hidden="hidden">
-                    <input type="submit" id="submit" class="btn btn-default contactbtn" onclick="javascript: validations();" value="SEND MESSAGE"><span id="error"></span>
+                    <input type="submit" id="submit" class="btn btn-default contactbtn"
+                           onclick="javascript: validations();" value="SEND MESSAGE"><span id="error"></span>
                 </form>
             </div>
         </div>
     </div>
+
+
+
+
 </footer>
 
 <div class="container" style="background-color: #182227; width: 100%;">
@@ -1073,10 +1089,15 @@
         <i style="color: #269abc" class="fa fa-twitter-square fa-3x col-xs-3"></i>
         <i style="color: #ff4d4d" class="fa fa-google-plus-square fa-3x col-xs-3"></i>
     </div>
+    <br/>
+    <div class="statcounter float-right col-xs-12">
+        <a title="web analytics" href="http://statcounter.com/" target="_blank">
+        <img class="statcounter"
+             src="http://c.statcounter.com/10555606/0/1b42f14f/0/"
+             alt="web analytics" style="position: absolute; bottom: 0; right: 0;">
+        </a>
+    </div>
 </div>
-
-
-
 
 
 <a id="totop"><i class="fa fa-arrow-up" style="font-size: 20px; color: #ffffff; padding: 10px;"></i></a>
@@ -1091,11 +1112,9 @@
 <script src="js/bootstrap.min.js"></script>
 
 
-
 <!--carousel js-->
 <script src="js/jquery.gallery.js"></script>
 <!--<script src="js/jquery.carouFredSel-6.0.4-packed.js"></script>-->
-
 
 
 <!-- Custom Theme JavaScript -->
@@ -1130,30 +1149,26 @@
 
 
         //-to top js
-        $(window).scroll(function() {
-            if($(this).scrollTop() != 0) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() != 0) {
                 $('#totop').fadeIn();
             } else {
                 $('#totop').fadeOut();
             }
         });
 
-        $('#totop').click(function() {
-            $('body,html').animate({scrollTop:0},500);
+        $('#totop').click(function () {
+            $('body,html').animate({scrollTop: 0}, 500);
         });
-
-
 
 
 //--------------------carousel image slider starts---------------------
 
         $('#dg-container').gallery({
-            autoplay	:	true
+            autoplay: true
         });
 
         //-----------carousel image slider code ends-----------
-
-
 
 
     });
@@ -1161,14 +1176,11 @@
     //    $('.sidebar-nav>li>a').css('color','#fffeee');
 
 
-
-
 </script>
 
 
 <!--custom js-->
 <script src="js/index.js"></script>
-
 
 
 </body>
