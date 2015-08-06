@@ -1,0 +1,139 @@
+
+<html>
+<head>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/stylish-portfolio.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/firebasecustom.js"></script>
+</head>
+<body>
+<br/><br/><br/>
+<div id='messagesDiv'></div>
+<br/><br/><br/>
+<div class="col-xs-6">
+<input class="form-control" type="date" id="d_t" placeholder="date" >
+<input  class="form-control" type='text' id='nameInput' placeholder='Blogger Name'>
+<input  class="form-control" type='text' id='messageTitle' placeholder='Blog Title'>
+</div>
+<br/><br/><br/>
+
+<div class="col-xs-12">
+<textarea class="form-control" type='text' id='messagecontent' placeholder='Blog Body'></textarea>
+    </div>
+<br/><br/><br/>
+
+<button id="prev"><i class="fa fa-chevron-left"></i></button>
+
+<button id="next"><i class="fa fa-chevron-right"></i></button>
+
+
+
+
+
+
+
+
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<!-- jQuery -->
+<!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!--<script>
+    var myDataRef = new Firebase('https://v2u.firebaseio.com/');
+    $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+            var name = $('#nameInput').val();
+            var text = $('#messageTitle').val();
+            var message = $('#messagecontent').val();
+            myDataRef.push({name: name, text: text});
+            $('#messageInput').val('');
+        }
+    });
+
+
+
+    myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+    });
+    function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+    };
+</script>-->
+
+
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function handleFileSelect()
+        {
+            if (window.File && window.FileReader && window.FileList && window.Blob) {
+
+            } else {
+                alert('The File APIs are not fully supported in this browser.');
+                return;
+            }
+
+            input = document.getElementById('fileinput');
+            if (!input) {
+                alert("Um, couldn't find the fileinput element.");
+            }
+            else if (!input.files) {
+                alert("This browser doesn't seem to support the `files` property of file inputs.");
+            }
+            else if (!input.files[0]) {
+                alert("Please select a file before clicking 'Load'");
+            }
+            else {
+                file = input.files[0];
+                fr = new FileReader();
+                fr.onload = receivedText;
+                fr.readAsText(file);
+            }
+        }
+
+        function receivedText() {
+            //result = fr.result;
+            document.getElementById('editor').appendChild(document.createTextNode(fr.result))
+        }
+
+    </script>
+</head>
+<body>
+<h1>Blog Editor</h1>
+<input type="file" id="fileinput"/>
+<input type='button' id='btnLoad' value='Load' onclick='handleFileSelect();'>
+<div id="editor"></div>
+</body>
+</html>-->
